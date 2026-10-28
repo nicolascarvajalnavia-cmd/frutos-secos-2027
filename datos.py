@@ -30,7 +30,8 @@ S = {  # fuentes reutilizadas
     "wf27": ("Whole Foods Market, tendencias 2027", "https://press.aboutamazon.com/2026/10/whole-foods-market-reveals-its-top-food-and-beverage-trend-predictions-for-2027", "oct 2026"),
     "inc_macao": ("INC, Congreso de Macao 2026", "https://inc.nutfruit.org/1300-global-leaders-convene-at-inc-congress-in-macao-to-advance-future-of-nuts-and-dried-fruit/", "may 2026"),
     "inc_ar": ("INC, Annual Report 2025 (PDF, pág. 32)", "https://inc.nutfruit.org/wp-content/uploads/2026/04/2025-ANNUAL-REPORT.pdf", "abr 2026"),
-    "pist_crop": ("Morning Ag Clips / California Farm Bureau", "https://www.morningagclips.com/growers-harvest-short-pistachio-crop-as-costs-mount/", "oct 2026"),
+    "pist_crop": ("Ag Alert / California Farm Bureau", "https://www.agalert.com/california-ag-news/archives/october-21-2026/growers-harvest-short-pistachio-crop-as-costs-mount/", "oct 2026"),
+    "anvisa": ("Anvisa, aprobación de semaglutida sintética (Ozivy)", "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-primeira-caneta-de-semaglutida-sintetica-analoga-ao-ozempic-para-diabetes", "may 2026"),
     "nutlink": ("Nutlink, precios del pistacho", "https://nutlink.org/en/war-in-iran-and-the-rise-of-dubai-chocolate-drive-pistachio-prices-higher/", "abr 2026"),
     "upra": ("UPRA, Boletín de precios (PDF)", "https://upra.gov.co/sites/default/files/2026-01/01_BolPpmS1_20251218.pdf", "dic 2025"),
     "lr_mp": ("La República, marcas propias en Colombia", "https://www.larepublica.co/empresas/el-hard-discount-reina-en-marcas-propias-4241004", "oct 2025"),
@@ -80,27 +81,27 @@ RESUMEN = [
     ("El placer no se negocia",
      "Sabor y textura siguen mandando. Dulce-picante, sabores locales, crocante con cremoso. El bienestar que no sabe rico no se recompra."),
     ("En Colombia mandan el precio y la etiqueta",
-     "Los frutos secos subieron más del doble que los alimentos en general y el descuento duro crece. Además, un proyecto de MinSalud podría crear un sello de “ultraprocesado” y otro verde de “alimento saludable”."),
+     "Entre enero y noviembre de 2025, los frutos secos subieron en el IPC más del doble que los alimentos en general, y el descuento duro crece. Además, un proyecto de MinSalud podría crear un sello de “ultraprocesado” y otro verde de “alimento saludable”."),
 ]
 
 ACCIONES = [
-    "Lanzar una mezcla diaria de 25-30 g, sin sellos, con proteína y fibra en el frente del empaque.",
+    "Probar una mezcla diaria de 25-30 g con proteína y fibra en el frente del empaque, formulada para poder cumplir los requisitos de no llevar sellos (confirmar composición y etiquetado antes de lanzar).",
     "Probar un crocante con sabor local (limón y ají, panela picante) en edición limitada.",
-    "Revisar ya las fórmulas frente al posible sello de ultraprocesado, y dejar el pistacho para un piloto pequeño hasta que baje su costo con la cosecha 2027.",
+    "Revisar ya las fórmulas frente al posible sello de ultraprocesado, y probar el pistacho solo en un piloto pequeño: escalar si la demanda, el abastecimiento y el costo real lo permiten.",
 ]
 
 CONSUMIDOR = [
     {
         "id": "c-glp1", "titulo": "La era GLP-1: comer menos, pero mejor",
-        "idea": "Los medicamentos tipo Ozempic cambian cuánto y qué se compra, y ponen la saciedad y la energía estable en el centro de la conversación, incluso para quien no los usa.",
+        "idea": "Los GLP-1 (medicamentos para la diabetes y, en algunos casos, para bajar de peso, como Ozempic) están cambiando cuánto y qué compran los hogares que los usan en EE.UU.",
         "geo": ["eeuu", "col"], "conf": "Alta en EE.UU. · media en Colombia",
         "datos": [
             d("En EE.UU., los adultos que usan hoy un GLP-1 para bajar de peso pasaron del 3% (2024) al 8% (2025) y al 11% (2026).", "gallup_glp", "e"),
-            d("Los hogares que empiezan un GLP-1 recortan 5,3% el gasto de supermercado y 10,1% el de snacks salados en seis meses.", "cornell", "e"),
+            d("En hogares de EE.UU., empezar un GLP-1 se asoció con un gasto 5,3% menor en supermercado y 10,1% menor en snacks salados en los seis meses siguientes.", "cornell", "e"),
             d("Colombia: el 25% de los hogares conoce los GLP-1, frente al 20% en 2025. Es conocimiento, no uso.", "wp_col", "o"),
         ],
         "mini": {"titulo": "Adultos de EE.UU. que usan GLP-1 para bajar de peso", "unidad": "%", "datos": [("2024", 3), ("2025", 8), ("2026", 11)], "fuente": "gallup_glp", "max": 14},
-        "accion": "Pierde el snack salado genérico y de bolsa grande. Gana la porción pequeña y densa en nutrientes: “poco volumen, mucha nutrición”. En Colombia, vigilar y tener el formato listo, sin hacer de esto el eje del negocio y sin promesas médicas.",
+        "accion": "En EE.UU. se observan cambios de compra que favorecen porciones pequeñas y nutritivas. En Colombia solo se mide el conocimiento: probar formatos pequeños y medir su aceptación, sin hacer de esto el eje del negocio y sin promesas médicas.",
         "rel": ["s-metabolico", "s-porcion"],
     },
     {
@@ -109,7 +110,7 @@ CONSUMIDOR = [
         "geo": ["eeuu", "global"], "conf": "Alta",
         "datos": [
             d("El 70% de los estadounidenses intenta comer proteína. La dieta “alta en proteína” pasó del 4% (2018) al 27% (2026).", "ific_prot", "o"),
-            d("Alerta: entre quienes buscan proteína, solo el 53% la obtiene de frutos secos y semillas (68% en 2016).", "ific_pdf", "e"),
+            d("Alerta: entre los estadounidenses que buscan consumir proteína, el 53% intenta incluir frutos secos y semillas, frente al 68% en 2016.", "ific_pdf", "e"),
             d("Más de un tercio cree que la industria exagera con la proteína.", "niq_snack", "o"),
             d("Euromonitor: “la fibra es la próxima proteína”.", "euro_prot", "o"),
         ],
@@ -123,10 +124,10 @@ CONSUMIDOR = [
         "datos": [
             d("En EE.UU., quienes conocen el término “ultraprocesado” pasaron del 32% (2024) al 52% (2026).", "ific_upf", "o"),
             d("El 41% de los adultos que quieren mejorar su dieta está comiendo menos ultraprocesados (encuesta global, n=21.156).", "euro_prot", "o"),
-            d("El 25% usa apps que escanean ingredientes, y el 87% de ellos devuelve el producto a la góndola si sale mal calificado.", "niq_snack", "o"),
+            d("El 25% usa apps que escanean ingredientes, y el 87% de ellos dice que probablemente descartaría un producto mal calificado (la nota de NIQ no precisa el país).", "niq_snack", "o"),
         ],
         "mini": {"titulo": "Conocen el término “ultraprocesado” (EE.UU.)", "unidad": "%", "datos": [("2024", 32), ("2025", 44), ("2026", 52)], "fuente": "ific_upf", "max": 100},
-        "accion": "Es la mayor ventaja de la categoría. Tostado en seco, de 1 a 3 ingredientes, sin maltodextrina ni saborizantes. En Colombia puede volverse obligatorio en la práctica (ver la sección Colombia).",
+        "accion": "Es la mayor ventaja de la categoría: tostado en seco, de 1 a 3 ingredientes, sin maltodextrina ni saborizantes. Las recetas simples son una opción comercial; en Colombia, un proyecto de MinSalud podría añadir una advertencia según los ingredientes, si se aprueba (ver la sección Colombia).",
         "rel": ["s-minimo", "col-reg"],
     },
     {
@@ -136,7 +137,7 @@ CONSUMIDOR = [
         "datos": [
             d("Colombia: el 76% de los consumidores tiene prácticas de cuidado de la salud (29% muy activos y 47% moderados).", "wp_col", "o"),
             d("Colombia: el 43% se declara “reductor de azúcar”, el 69% de los hogares revisa el azúcar en la etiqueta y el volumen de azúcar comprado bajó 2%.", "wp_col", "o"),
-            d("En el mundo, el 59% lee toda o casi toda la información nutricional del empaque.", "innova27", "o"),
+            d("En el mundo, el 59% lee toda o casi toda la información nutricional del empaque.", "innova27", "t"),
         ],
         "accion": "Sin azúcar añadida como norma. En las mezclas, cuidado con la fruta confitada y las coberturas, que son las que suben el azúcar. Ofrecer una entrada fácil para quien empieza y más información para quien ya se cuida.",
         "rel": ["s-minimo", "s-textura"],
@@ -150,7 +151,7 @@ CONSUMIDOR = [
             d("El 55% de los compradores de EE.UU. come 3 o más snacks al día, 9 puntos más que en 2021.", "circana", "o"),
             d("Colombia: los hogares de una persona son el 20%, y el tiempo para preparar comida bajó a 23 minutos por ocasión.", "kantar_hog", "t"),
         ],
-        "accion": "Mezclas pensadas como mini-comida (fruto seco, fruta, semilla y algo de grano), complementos para yogur o avena, y empaques para una persona. Poner la ocasión en el empaque: media mañana, oficina, después del ejercicio.",
+        "accion": "Mezclas para la media mañana (fruto seco, fruta, semilla y algo de grano), complementos para yogur o avena, y empaques para una persona. Poner la ocasión en el empaque: media mañana, oficina, después del ejercicio.",
         "rel": ["s-porcion"],
     },
     {
@@ -159,8 +160,8 @@ CONSUMIDOR = [
         "geo": ["col", "eeuu"], "conf": "Alta",
         "datos": [
             d("Por primera vez en 21 años, la conveniencia (61%) supera a la salud (56%) como factor de compra de comida en EE.UU. El sabor (88%) y el precio (78%) siguen arriba.", "ific_upf", "o"),
-            d("El 46% compra snacks con menos frecuencia por la inflación, y el 38% reduce las compras por impulso.", "niq_snack", "o"),
-            d("Colombia: “frutos secos y nueces” subió 12,46% en el IPC de enero a noviembre de 2025, frente a 5,18% de los alimentos.", "upra", "o"),
+            d("El 46% compra snacks con menos frecuencia por la inflación, y el 38% reduce las compras por impulso (NIQ; la nota no precisa el país).", "niq_snack", "o"),
+            d("Colombia: entre enero y noviembre de 2025, el IPC de “frutos secos y nueces” subió 12,46%, frente a 5,18% de los alimentos (DANE, reproducido por UPRA). Es precio al consumidor, no costo mayorista.", "upra", "o"),
             d("Colombia: inflación anual de 6,29% en septiembre de 2026.", "dane", "e"),
         ],
         "accion": "Comunicar el precio por porción, tener formatos pequeños de entrada para la tienda de barrio y el descuento duro, usar mezclas con base de maní y reservar marañón, pistacho y macadamia para el gusto premium.",
@@ -186,7 +187,7 @@ CONSUMIDOR = [
         "datos": [
             d("Por primera vez, envejecer de forma saludable es el beneficio más buscado en los alimentos en EE.UU. (53% entre los baby boomers).", "ific_prot", "o"),
             d("El 57% prioriza envejecer bien más que hace cinco años.", "niq25", "o"),
-            d("Los lanzamientos con declaración de “envejecer bien” crecieron 55% en un año.", "innova27", "o"),
+            d("Los lanzamientos con declaración de “envejecer bien” crecieron 55% en un año.", "innova27", "t"),
         ],
         "accion": "Hay respaldo nutricional para hablar de corazón y dieta mediterránea (la nuez es un ícono), pero en Colombia las declaraciones de salud están restringidas. Hablar de alimentación cotidiana y pensar en empaques fáciles de abrir y en texturas como las cremas.",
         "rel": ["s-cremas"],
@@ -223,7 +224,7 @@ SNACKS = [
         "idea": "Es la tendencia número 1 de Innova para 2027. Los frutos secos traen proteína, fibra y grasas buenas sin añadir nada.",
         "geo": ["global", "eeuu"], "conf": "Alta",
         "datos": [
-            d("Los lanzamientos que declaran proteína y fibra a la vez crecieron 15% en un año.", "innova27", "o"),
+            d("Los lanzamientos que declaran proteína y fibra a la vez crecieron 15% en un año.", "innova27", "t"),
             d("El 64% de los consumidores de EE.UU. busca más fibra.", "fn_fiber", "t"),
             d("Whole Foods incluyó “Focus on Fiber” en sus tendencias 2026.", "wf26", "p"),
         ],
@@ -235,16 +236,16 @@ SNACKS = [
         "idea": "Innova la pone número 4 en 2027. Crecen los productos que prometen energía estable, saciedad y bajo índice glucémico, empujados por los GLP-1.",
         "geo": ["global", "eeuu"], "conf": "Alta global · media en Colombia",
         "datos": [
-            d("Lanzamientos “aptos para GLP-1”: +190%. Con saciedad o control del apetito: +34%. Con bajo índice glucémico: +30%.", "innova27", "o"),
+            d("Lanzamientos “aptos para GLP-1”: +190%. Con saciedad o control del apetito: +34%. Con bajo índice glucémico: +30%.", "innova27", "t"),
             d("Los usuarios de GLP-1 se mueven hacia proteína, frutos secos y granos, y se alejan de lo dulce y lo frito.", "circana", "o"),
-            d("Los hogares con GLP-1 ya hacen el 23% de las unidades de alimentos vendidas en EE.UU.; Circana proyecta 35% para 2030.", "circana_glp", "o"),
-            d("Matiz: el 56% de los usuarios de GLP-1 en EE.UU. dice que se da más gustos desde que empezó.", "innova27", "o"),
+            d("Los hogares con GLP-1 ya hacen el 23% de las unidades de alimentos vendidas en EE.UU.; Circana proyecta 35% para 2030.", "circana_glp", "t"),
+            d("Matiz: el 56% de los usuarios de GLP-1 en EE.UU. dice que se da más gustos desde que empezó.", "innova27", "t"),
         ],
-        "accion": "Porciones de 100 a 150 kcal con proteína, fibra y grasa buena. El argumento es la saciedad y “mucha nutrición en poco volumen”, nunca adelgazar.",
+        "accion": "Probar porciones pequeñas y comunicar su composición medida. El rango de 100 a 150 kcal es una hipótesis de desarrollo, no una recomendación para usuarios de GLP-1. No atribuir al producto efectos sobre el apetito o la glucosa sin evidencia específica.",
         "rel": ["c-glp1"],
     },
     {
-        "id": "s-porcion", "titulo": "Porción controlada y mini-comida",
+        "id": "s-porcion", "titulo": "Porción controlada",
         "idea": "El empaque ayuda a decidir cuánto comer y cuánto gastar. El formato pequeño sirve al bienestar y al bolsillo a la vez.",
         "geo": ["global", "latam"], "conf": "Alta",
         "datos": [
@@ -260,7 +261,7 @@ SNACKS = [
         "geo": ["eeuu", "col"], "conf": "Alta",
         "datos": [
             d("Whole Foods pone el “minimalismo de ingredientes” entre sus 8 tendencias 2027, con ejemplos de mantequilla de pistacho y barras de nueces y semillas.", "wf27", "p"),
-            d("Manitoba lanzó en 2026 una crema de almendra y marañón que vende como “libre de sellos”.", "pym", "o"),
+            d("Colombia: Manitoba lanzó en 2026 una crema de almendra y marañón que presenta como “libre de sellos”.", "pym", "t"),
         ],
         "accion": "Tostar en seco o con aceite de oliva o alto oleico, y evitar coberturas con exceso de azúcar o sodio. Explicar en la etiqueta por qué la crema natural separa aceite.",
         "rel": ["c-upf", "c-azucar", "col-reg"],
@@ -272,10 +273,10 @@ SNACKS = [
         "datos": [
             d("“El pistacho es el nuevo fruto seco de moda, desplazando a la almendra”, según observación de feria de la Specialty Food Association.", "sfa", "p"),
             d("En 2026 lanzaron productos de pistacho Lindt, Häagen-Dazs y Costco, entre otros.", "bakery_nuts", "o"),
-            d("Precio de US$4,57 por libra en marzo de 2026, el más alto en 8 años.", "nutlink", "o"),
-            d("Cosecha de EE.UU.: 1.570 M lb en 2025 (récord), cerca de 655 M lb en 2026 y 1.760 a 1.900 M lb proyectadas para 2027.", "pist_crop", "o"),
+            d("Nutlink reportó cerca de US$4,57 por libra en marzo de 2026, máximo de ocho años; no es una cotización de compra para Colombia.", "nutlink", "o"),
+            d("Cosecha de EE.UU.: 1.570 M lb en 2025 (récord) y cerca de 655 M lb estimadas en 2026. Los productores ven un potencial de 1.760 a 1.900 M lb en 2027, sujeto al clima.", "pist_crop", "o"),
         ],
-        "accion": "Edición limitada de crema o bocado con pistacho, declarando su proporción real. Mezclas con marañón para bajar el costo. Escalar cuando entre la cosecha de EE.UU. 2027 (septiembre-octubre).",
+        "accion": "Piloto pequeño: edición limitada de crema o bocado con pistacho, declarando su proporción real, y mezclas con marañón para bajar el costo. Escalar solo si la demanda, el abastecimiento y el costo real lo permiten; una buena cosecha en EE.UU. en 2027 no garantiza menores precios en Colombia.",
         "rel": ["mercado", "idea-crema"],
     },
     {
@@ -283,7 +284,7 @@ SNACKS = [
         "idea": "Miel picante, chile y limón, chamoy: los sabores intensos llegan a los frutos secos. En Colombia, lo mejor es partir de sabores conocidos.",
         "geo": ["global", "latam"], "conf": "Media-alta",
         "datos": [
-            d("Lanzamientos dulce-picante: +31%. Ácido-picante: +27%.", "innova27", "o"),
+            d("Lanzamientos dulce-picante: +31%. Ácido-picante: +27%.", "innova27", "t"),
             d("El 55% se interesa por sabores de comida callejera en productos empacados.", "innova_street", "o"),
             d("Kerry ubica lima con chile entre las señales nuevas de snacks en Latinoamérica.", "kerry", "p"),
         ],
@@ -292,13 +293,13 @@ SNACKS = [
     },
     {
         "id": "s-textura", "titulo": "La textura es parte del placer",
-        "idea": "Crocante con cremoso, clusters y fruta liofilizada: el consumidor quiere gusto y beneficio sin tener que elegir.",
+        "idea": "Crocante con cremoso, bocados aglomerados y fruta liofilizada: el consumidor quiere gusto y beneficio sin tener que elegir.",
         "geo": ["global"], "conf": "Media-alta",
         "datos": [
-            d("El 56% busca combinaciones de texturas interesantes, y los formatos liofilizados crecieron 46%.", "innova27", "o"),
+            d("El 56% busca combinaciones de texturas interesantes, y los formatos liofilizados crecieron 46%.", "innova27", "t"),
             d("El 67% de los alemanes prefiere snacks que mezclan texturas.", "mdlz26", "o"),
         ],
-        "accion": "Clusters de frutos secos con chocolate oscuro y poco azúcar, y fruta liofilizada colombiana (uchuva, mango, fresa) en las mezclas.",
+        "accion": "Bocados crocantes de frutos secos con chocolate oscuro y poco azúcar, y fruta liofilizada colombiana (uchuva, mango, fresa) en las mezclas.",
         "rel": ["c-gustos", "idea-crocante"],
     },
     {
@@ -307,10 +308,10 @@ SNACKS = [
         "geo": ["eeuu", "col"], "conf": "Media-alta",
         "datos": [
             d("En EE.UU., las ventas de mantequillas de frutos secos bajaron 1%. Jif lanzó una versión de 3 ingredientes con 8 g de proteína.", "fn_pb", "t"),
-            d("Colombia: según Nielsen, la crema de almendra crece 30% y la de marañón cerca de 980% (seguramente desde una base muy pequeña).", "pym", "t"),
-            d("Manitoba creció 23% en 2025.", "pym", "o"),
+            d("Colombia: Manitoba lanzó en 2026 una crema de almendra y marañón. Es una señal de innovación local; la nota pública no permite cuantificar el crecimiento de estas cremas.", "pym", "t"),
+            d("Colombia: P&M reporta que Manitoba creció 23% en 2025, sin precisar la variable.", "pym", "t"),
         ],
-        "accion": "Cremas de mezcla (maní con marañón, almendra con cacao), en formatos individuales o squeeze, con tres usos en la etiqueta: desayuno, fruta y salsa.",
+        "accion": "Cremas de mezcla (maní con marañón, almendra con cacao), en porciones individuales o envase flexible dosificador, con tres usos en la etiqueta: desayuno, fruta y salsa.",
         "rel": ["c-longevidad", "idea-crema"],
     },
     {
@@ -318,9 +319,9 @@ SNACKS = [
         "idea": "La presión del precio y el descuento duro empujan la marca propia. Las mezclas permiten ofrecer variedad y un toque premium a menor costo.",
         "geo": ["eeuu", "col", "global"], "conf": "Alta",
         "datos": [
-            d("En EE.UU., las ventas de mezclas y snacks nutritivos crecieron 3,3%, frente a 0,9% de los frutos secos solos.", "snb26", "t"),
+            d("En EE.UU., las ventas en valor de “nutritional snacks and trail mixes” crecieron 3,3%, frente a 0,9% de “snack nuts”, en 52 semanas hasta mayo de 2026 (Circana, citado por el medio).", "snb26", "t"),
             d("La marca propia tiene el 16,6% de las unidades de snacks en EE.UU. y el 46,6% en Europa.", "circana", "o"),
-            d("Colombia: más del 80% de lo que vende D1 es marca propia, y en Ara el 41%.", "lr_mp", "o"),
+            d("Colombia: según declaraciones de las empresas publicadas en octubre de 2025, más del 80% de las ventas totales de D1 y el 41% de las de Ara son marcas propias. No es una cifra de frutos secos.", "lr_mp", "t"),
         ],
         "accion": "Base de maní con piezas premium. Decidir si se compite con marca, si se maquila para marca propia o ambas cosas, con líneas separadas.",
         "rel": ["c-valor", "idea-mezcla"],
@@ -331,10 +332,10 @@ SNACKS = [
         "geo": ["eeuu", "col", "global"], "conf": "Media",
         "datos": [
             d("Whole Foods pone el origen (“Terroir's New Territory”) como su tendencia número 1 de 2027, junto a “Zero Waste 2.0”.", "wf27", "p"),
-            d("El Almond Board presentó polvo de cáscara de almendra: una porción de granola con él aportó 11 g de fibra.", "fp_hull", "o"),
-            d("Colombia: Vichada tiene entre 8.200 y 8.500 hectáreas de marañón, más del 90% de la oferta nacional.", "infobae_maranon", "o"),
+            d("En una feria de EE.UU. se presentó un polvo de la cubierta exterior de la almendra (distinta de la cáscara dura). Una onza (unos 28 g) de una granola prototipo con ese ingrediente aportó 11 g de fibra.", "fp_hull", "p"),
+            d("Colombia: Vichada tiene entre 8.200 y 8.500 hectáreas de marañón, más del 90% de la oferta nacional.", "infobae_maranon", "t"),
         ],
-        "accion": "Contar el origen por lote (por ejemplo, marañón del Vichada) solo con trazabilidad real. Aprovechar trozos y partidos para cremas y toppings.",
+        "accion": "Contar el origen por lote (por ejemplo, marañón del Vichada) solo con trazabilidad real. Aprovechar trozos y partidos para cremas e ingredientes para añadir a otros platos.",
         "rel": ["c-confianza"],
     },
 ]
@@ -344,38 +345,38 @@ PRODUCCION = [("15/16", 3.78), ("16/17", 4.21), ("17/18", 4.18), ("18/19", 4.44)
               ("20/21", 5.49), ("21/22", 5.36), ("22/23", 5.36), ("23/24", 5.68), ("24/25", 6.02), ("25/26*", 5.93)]
 CAMBIO_2627 = [("Nuez de Brasil", 81), ("Piñón", 63), ("Avellana", 39), ("Almendra", 3), ("Nuez de nogal", 0.15),
                ("Marañón", -3), ("Maní", -6), ("Pistacho", -36)]
-PISTACHO = [("2025", 1570, None), ("2026", 655, None), ("2027 (proyección)", 1760, 1900)]
+PISTACHO = [("2025", 1570, None), ("2026 (estimación)", 655, None), ("2027 (escenario)", 1760, 1900)]
 PARTICIPACION = [("Almendra", 27), ("Pistacho", 20), ("Marañón", 19), ("Nuez de nogal", 19), ("Avellana", 10), ("Otros", 5)]
 
 COLOMBIA_TILES = [
     ("76%", "de los consumidores tiene prácticas de cuidado de la salud", "wp_col"),
     ("43%", "se declara “reductor de azúcar”", "wp_col"),
     ("25%", "de los hogares conoce los GLP-1 (20% en 2025)", "wp_col"),
-    ("+12,5%", "subieron los frutos secos en el IPC 2025, frente a +5,2% de los alimentos", "upra"),
+    ("+12,5%", "subió el IPC de frutos secos y nueces entre enero y noviembre de 2025, frente a +5,2% de los alimentos", "upra"),
     ("COP 8,4 bill.", "valía el mercado de snacks en 2023; crece más de 5% al año", "elcol_snacks"),
-    ("Más del 80%", "de las ventas de D1 son marca propia", "lr_mp"),
+    ("Más del 80%", "de las ventas totales de D1 son marcas propias, según la empresa (2025)", "lr_mp"),
 ]
 
 REGULACION = [
-    ("Hoy: sellos de advertencia", "Resolución 810 de 2021 y 2492 de 2022. Cinco sellos negros (“exceso en” sodio, azúcares, grasas saturadas o trans, y “contiene edulcorantes”). Solo aplican si el nutriente fue añadido. Un fruto seco natural o tostado en seco no lleva sello; uno salado probablemente lleve el de sodio (umbral de 300 mg por 100 g en sólidos).", "invima_810"),
-    ("Hoy: impuesto saludable (ICUI) del 20%", "Ley 2277 de 2022: 10% en 2023, 15% en 2024 y 20% desde 2025. Según la DIAN, aplica a productos ultraprocesados (más de 5 ingredientes o aditivos) con azúcar, sal o grasa añadidas por encima de los umbrales. Un fruto seco solo con sal probablemente no está gravado; uno recubierto y saborizado podría estarlo. Confirmarlo con un tributarista.", "dian_5500"),
-    ("En camino: sello de “ultraprocesado” y sello verde", "Proyecto de MinSalud publicado el 21 de abril de 2026: un sello de “ultraprocesado” para productos con ingredientes como maltodextrina o con aditivos “cosméticos” (colorantes, saborizantes, potenciadores), y un sello verde voluntario de “alimento saludable” para alimentos sin procesar o mínimamente procesados. La consulta cerró el 6 de mayo de 2026. A octubre seguía sin expedirse y la ANDI se opone.", "minsalud_pr"),
+    ("Hoy: sellos de advertencia", "Resolución 810 de 2021 y 2492 de 2022. Cinco sellos negros (“exceso en” sodio, azúcares, grasas saturadas o trans, y “contiene edulcorantes”). Solo aplican si el nutriente fue añadido. En sólidos con sodio añadido se evalúan dos límites: 300 mg o más por 100 g, o 1 mg o más por kcal; basta alcanzar uno. Los demás sellos dependen de los ingredientes y criterios aplicables.", "invima_810"),
+    ("Hoy: impuesto saludable (ICUI) del 20%", "Ley 2277 de 2022: 10% en 2023, 15% en 2024 y 20% desde 2025. Para determinar si aplica se revisan en conjunto la clasificación arancelaria, el procesamiento, los ingredientes añadidos y los umbrales nutricionales. Contar ingredientes o mirar los sellos no basta: revisar cada referencia con un asesor tributario.", "dian_5500"),
+    ("En discusión: proyecto de nuevos sellos", "Proyecto de MinSalud publicado el 21 de abril de 2026: un sello de “ultraprocesado” para productos con ingredientes como maltodextrina o con aditivos “cosméticos” (colorantes, saborizantes, potenciadores), y un sello verde voluntario de “alimento saludable” para alimentos sin procesar o mínimamente procesados. La consulta cerró el 6 de mayo de 2026. A octubre seguía sin expedirse y la ANDI se opone. Es un borrador: no está vigente y puede cambiar.", "minsalud_pr"),
 ]
 
 CALENDARIO = [
     ("29 oct 2026", "USDA publica su informe semestral de frutos secos (oferta y precios).", "usda_tn"),
     ("Nov 2026", "Euromonitor suele publicar a inicios de noviembre sus tendencias globales del consumidor del año siguiente.", None),
     ("2 dic 2026", "Mintel presenta en español sus predicciones 2027 para Latinoamérica.", "mintel_latam"),
-    ("2027", "Posible expedición de la nueva resolución de etiquetado de MinSalud (sin fecha confirmada).", "infoalim"),
-    ("15 ago 2027", "Fecha que fija el borrador para retirar productos que no cumplan, si la resolución se expide así.", "carnotecnia"),
-    ("Sep-oct 2027", "Cosecha alta de pistacho en EE.UU.: podría aliviar su precio para el segundo semestre.", "pist_crop"),
+    ("Sin fecha", "Seguimiento a la eventual expedición de la resolución de etiquetado de MinSalud y a su texto definitivo.", "infoalim"),
+    ("15 ago 2027", "Fecha propuesta en el borrador para retirar productos que no cumplan. Solo aplicaría si la resolución se expide así; está sujeta a cambios.", "carnotecnia"),
+    ("Sep-oct 2027", "Cosecha de pistacho de EE.UU.: los productores ven potencial de recuperación, sujeto al clima. No asegura menores costos en Colombia.", "pist_crop"),
 ]
 
 IDEAS = [
     {
-        "id": "idea-mezcla", "cuando": "Primero", "titulo": "Mezcla diaria “mini-comida”",
-        "que": "Base de maní con almendra, semillas y fruta deshidratada sin azúcar añadida, en porciones de 25 a 30 g y sin sellos. Gramos de proteína y fibra en el frente del empaque.",
-        "por": "Densidad nutricional, porción, valor y el snack que reemplaza comidas.",
+        "id": "idea-mezcla", "cuando": "Primero", "titulo": "Mezcla diaria para una pausa",
+        "que": "Base de maní con almendra, semillas y fruta deshidratada sin azúcar añadida, en porciones de 25 a 30 g, formulada para poder cumplir los requisitos de no llevar sellos (confirmar composición y etiquetado antes de lanzar). Gramos de proteína y fibra en el frente del empaque.",
+        "por": "Porción, valor, densidad nutricional y acompañamiento de yogur o avena.",
         "medir": "Agrado, precio aceptado, recompra y margen.",
         "rel": ["s-densidad", "s-porcion", "s-valor", "c-comidas"],
     },
@@ -395,7 +396,7 @@ IDEAS = [
     },
     {
         "id": "idea-crema", "cuando": "Después", "titulo": "Crema de 2-3 ingredientes y piloto de pistacho",
-        "que": "Crema de maní con marañón en squeeze o porción individual, con usos en la etiqueta. Una edición pequeña con pistacho, para escalar cuando baje su costo con la cosecha 2027.",
+        "que": "Crema de maní con marañón en envase flexible dosificador o porción individual, con usos en la etiqueta. Una edición pequeña con pistacho, para escalar solo si la aceptación, el suministro y el margen lo permiten.",
         "por": "Cremas, pistacho, ingredientes mínimos.",
         "medir": "Uso real en casa, estabilidad de la textura y disposición a pagar.",
         "rel": ["s-cremas", "s-pistacho"],
@@ -404,9 +405,9 @@ IDEAS = [
 
 SENALES = [
     ("Leguminosas como rivales", "Whole Foods pone el “boom del fríjol” (lupini, edamame, garbanzo) en 2027. Compiten con los frutos secos en el pasillo de snacks con proteína.", "wf27"),
-    ("GLP-1 más baratos", "La primera píldora GLP-1 se aprobó en EE.UU. en abril de 2026 y Brasil ya tiene semaglutida genérica. Si llegan genéricos a Colombia, la adopción podría acelerarse en 2027-2028.", "reuters_br"),
+    ("Más opciones de tratamiento GLP-1", "EE.UU. aprobó Foundayo, otra opción oral, en abril de 2026, y Brasil aprobó Ozivy, una semaglutida sintética análoga para diabetes, en mayo. Su efecto sobre el acceso, los precios y la adopción en Colombia está por comprobar.", "anvisa"),
     ("Menos alcohol", "En EE.UU. solo el 54% de los adultos bebe, el mínimo histórico. La picada social sigue, pero con bebidas sin alcohol.", "gallup_alc"),
-    ("Sueño y descanso", "El 40% tiene mejorar el sueño entre sus principales objetivos. El vínculo con frutos secos (magnesio) está por validar; nada de promesas.", "pwc"),
+    ("Sueño y descanso", "En una encuesta internacional de PwC (21.808 personas de 27 países; no es un dato colombiano), el 40% tiene mejorar el sueño entre sus principales objetivos. El vínculo con frutos secos (magnesio) está por validar; nada de promesas.", "pwc"),
     ("Salud femenina y menopausia", "El Global Wellness Summit la puso como tendencia número 1 de 2026. Los datos son sobre todo de suplementos, no de alimentos.", "gws"),
     ("Niños que leen etiquetas", "Los padres en EE.UU. dicen que sus hijos de la generación Alpha ya preguntan por ingredientes y piden snacks con proteína: una oportunidad para loncheras.", "fn_alpha"),
     ("Leche de almendra a la baja", "Las bebidas vegetales caen en EE.UU. y la almendra pierde terreno; solo crecen nichos como el pistacho, desde bases pequeñas.", "gfi"),
@@ -421,10 +422,10 @@ CONSENSO = {
         "Separar siempre el dato medido, el pronóstico de terceros y nuestra lectura, y decir dónde se midió cada cifra.",
     ],
     "difieren": [
-        ("GLP-1", "Claude lo veía como un motor fuerte; Codex, como una señal a vigilar en Colombia.", "Es un motor global bien documentado. En Colombia solo hay datos de conocimiento (25% de los hogares), no de uso: vigilarlo y tener el formato listo, sin hacerlo el eje."),
-        ("Pistacho", "Claude lo ponía como tendencia fuerte; Codex pedía “una prueba, no una apuesta”.", "El sabor sigue en 2027, pero su costo está en máximos de 8 años. Piloto pequeño ahora y escalar con la cosecha de EE.UU. de 2027."),
-        ("Colombia", "La investigación de Codex no cubría la regulación ni los costos; la de Claude sí.", "Se incluyen como el factor local más decisivo: sellos, impuesto, proyecto de sello de ultraprocesado y precios."),
-        ("Formato", "Codex propuso una sola página con tarjetas desplegables, filtro por geografía y pocas gráficas.", "Se adoptó tal cual. Claude añadió gráficas de mercado de una sola fuente cada una, el calendario y las ideas enlazadas a las tendencias."),
+        ("GLP-1", "Claude lo veía como un motor fuerte; Codex, como una señal a vigilar en Colombia.", "Hay cambios de compra documentados en EE.UU. y señales en otros mercados. Para Colombia, la fuente consultada mide conocimiento en hogares, no uso ni demanda de estos snacks. Vigilar y probar formatos; no usarlo como eje del negocio."),
+        ("Pistacho", "Claude lo ponía como tendencia fuerte; Codex pedía “una prueba, no una apuesta”.", "Piloto pequeño. La recuperación potencial de la cosecha estadounidense en 2027 no asegura menores costos locales. Escalar solo con aceptación, suministro y margen comprobados."),
+        ("Colombia", "La investigación de Codex no cubría la regulación ni los costos; la de Claude sí.", "Se incorporan precios al consumidor y regulación local, distinguiendo normas vigentes de proyectos. Su impacto sobre cada producto requiere evaluación."),
+        ("Formato", "Codex propuso una sola página con tarjetas desplegables, filtro por geografía y pocas gráficas.", "Se adoptaron una página con desplegables y filtros, y se añadieron gráficas (cada una de una sola fuente, con tabla legible en el celular), calendario e ideas enlazadas a las tendencias."),
     ],
 }
 

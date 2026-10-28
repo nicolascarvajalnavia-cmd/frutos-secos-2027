@@ -113,9 +113,11 @@ figure{margin:0}
 .src{font-size:.8rem;color:var(--muted);margin-top:8px}
 svg .grid{stroke:var(--grid);stroke-width:1}
 svg .axis{stroke:var(--muted);stroke-width:1;opacity:.6}
-svg .lab{fill:var(--muted);font:13px var(--sans)}
-svg .lab.strong{fill:var(--ink2);font-size:14px}
-svg .val{fill:var(--ink);font:600 13px var(--sans)}
+svg .lab{fill:var(--muted);font:14px var(--sans)}
+svg .lab.strong{fill:var(--ink2);font-size:15px}
+svg .val{fill:var(--ink);font:600 14px var(--sans)}
+svg .hit:focus{outline:none;fill:color-mix(in srgb,var(--series) 10%,transparent)}
+@media (max-width:640px){.chart{padding:14px}.chart .tabla table{font-size:1rem}}
 svg .mark{fill:var(--series)}
 svg .neg{fill:var(--neg)}
 svg .proj{stroke:var(--series);stroke-width:1.5}
@@ -192,7 +194,7 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
     <p class="kicker">Informe de tendencias · Corte: {{CORTE}}</p>
     <h1>Frutos secos 2027</h1>
     <p class="lede">Comer rico, cuidarse y comprar con criterio. Lo que viene en snacks de frutos secos y en la relación del consumidor con el bienestar, y qué significa para Colombia.</p>
-    <ul class="meta"><li>Lectura de unos 6 minutos</li><li>{{N_TEND}} tendencias</li><li>{{N_FUENTES}} fuentes enlazadas</li></ul>
+    <ul class="meta"><li>Resumen de un minuto y lectura por secciones</li><li>{{N_TEND}} tendencias</li><li>{{N_FUENTES}} fuentes enlazadas</li></ul>
     <a class="cta" href="#resumen">Empezar por el resumen</a>
   </div>
 </header>
@@ -201,11 +203,9 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
     <li><a href="#resumen">Resumen</a></li>
     <li><a href="#consumidor">Consumidor</a></li>
     <li><a href="#snacks">Frutos secos</a></li>
-    <li><a href="#mercado">Mercado</a></li>
     <li><a href="#colombia">Colombia</a></li>
     <li><a href="#ideas">Ideas</a></li>
-    <li><a href="#calendario">Calendario</a></li>
-    <li><a href="#metodo">Cómo se hizo</a></li>
+    <li><a href="#metodo">Fuentes</a></li>
   </ul>
 </nav>
 <main class="wrap">
@@ -237,14 +237,14 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
 <section id="mercado">
   <p class="eyebrow">Parte 3 · Oferta y costos</p>
   <h2>El mercado en cifras</h2>
-  <p class="intro">El clima, los aranceles y la guerra en Irán hicieron de 2026 un año de choques de oferta. Pasa el cursor (o toca) las gráficas para ver cada valor.</p>
+  <p class="intro">El clima, los aranceles y la guerra en Irán hicieron de 2026 un año de choques de oferta. Pasa el cursor o toca las gráficas para ver cada valor. En el celular, los valores también están en la tabla bajo cada gráfica.</p>
   {{CHARTS}}
 </section>
 
 <section id="colombia">
   <p class="eyebrow">Parte 4 · Aterrizaje local</p>
   <h2>Colombia</h2>
-  <p class="intro">El consumidor colombiano ya se cuida, mira el azúcar y cuida el bolsillo. La regulación es la variable que más puede mover la góndola en 2027.</p>
+  <p class="intro">El consumidor colombiano ya se cuida, mira el azúcar y cuida el bolsillo. Los precios y la regulación pueden influir en las decisiones del negocio en 2027.</p>
   <div class="tiles">{{TILES}}</div>
   <h3 id="col-reg" style="font-size:1.4rem;margin:8px 0 12px">Regulación: lo que hay y lo que viene</h3>
   {{REG}}
@@ -270,7 +270,7 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
 <section id="metodo">
   <p class="eyebrow">Transparencia</p>
   <h2>Cómo se hizo este informe</h2>
-  <p class="intro">Dos investigaciones independientes con IA: Claude (Anthropic), con dos líneas en paralelo, una de frutos secos y otra de consumidor, y más de 140 búsquedas y lecturas; y Codex (OpenAI), con su propia investigación y su propuesta de formato. Después se compararon y se llegó a un consenso. Cada cifra se revisó contra su fuente y se descartó lo que no se pudo respaldar.</p>
+  <p class="intro">Dos investigaciones independientes con IA: Claude (Anthropic), con dos líneas en paralelo, una de frutos secos y otra de consumidor, y más de 140 búsquedas y lecturas; y Codex (OpenAI), con su propia investigación y su propuesta de formato. Después se compararon y se llegó a un consenso. En una segunda ronda, Codex revisó el sitio terminado y se aplicaron sus 16 observaciones (precisión de alcances, niveles de evidencia, regulación y lectura en el celular). Se contrastaron las afirmaciones con publicaciones públicas y se distingue entre datos del autor, citas de terceros y previsiones; las bases originales no se auditaron.</p>
   <h3 style="font-size:1.2rem;margin:18px 0 6px">En qué coincidimos</h3>
   <ul class="plain">{{COINC}}</ul>
   <h3 style="font-size:1.2rem;margin:18px 0 6px">Dónde diferíamos y cómo se resolvió</h3>
@@ -318,12 +318,12 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
   $$('.filtro .chip').forEach(function(c){ c.addEventListener('click',function(){ aplicar(c.dataset.f); }); });
   $$('.toggle-all').forEach(function(b){
     b.addEventListener('click',function(){
-      var cards=$$('.card:not([hidden])', $('.cards[data-sec="'+b.closest('.filtro').dataset.sec+'"]'));
-      var abrir=cards.some(function(c){return !c.open});
-      cards.forEach(function(c){c.open=abrir});
-      b.textContent=abrir?'Cerrar todas':'Abrir todas';
+      var abrir=b.dataset.open==='1';
+      $$('.card:not([hidden])', $('.cards[data-sec="'+b.closest('.filtro').dataset.sec+'"]')).forEach(function(c){c.open=abrir});
     });
   });
+  // en el celular, las tablas de las gráficas abiertas para leer los valores
+  if(window.matchMedia('(max-width:640px)').matches) $$('#mercado details.tabla').forEach(function(d){d.open=true});
   aplicar('all');
 
   // abrir la tarjeta del enlace (#id) aunque esté filtrada
@@ -367,8 +367,11 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0 48px;colo
         dots.forEach(function(d){ d.classList.toggle('hot', d.dataset.i===h.dataset.i); });
         if(marks.length===hits.length){ svg.classList.add('dim'); marks.forEach(function(m,j){ m.classList.toggle('hot', j===i); }); }
       }
+      function leave(){ hide(); svg.classList.remove('dim'); if(guide) guide.classList.remove('on'); dots.forEach(function(d){d.classList.remove('hot')}); }
       h.addEventListener('pointerenter',enter); h.addEventListener('pointermove',function(ev){show(ev,h.dataset.tip)});
-      h.addEventListener('pointerleave',function(){ hide(); svg.classList.remove('dim'); if(guide) guide.classList.remove('on'); dots.forEach(function(d){d.classList.remove('hot')}); });
+      h.addEventListener('pointerleave',leave);
+      h.addEventListener('focus',function(){ var r=h.getBoundingClientRect(); enter({clientX:r.left+r.width/2,clientY:r.top+20}); });
+      h.addEventListener('blur',leave);
     });
     $$('.mini .mark',svg).forEach(function(m){
       m.addEventListener('pointerenter',function(ev){show(ev,m.dataset.tip)}); m.addEventListener('pointerleave',hide);

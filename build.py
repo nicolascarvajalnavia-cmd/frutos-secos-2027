@@ -118,12 +118,12 @@ def chart_produccion():
     step = (w - l - r) / (n - 1)
     for i, (lab, v) in enumerate(pts):
         tip = f'Temporada 20{lab.replace("*", "")}: {fmt(v, 2)} millones de t' + (" (estimado)" if "*" in lab else "")
-        o.append(f'<rect class="hit" x="{x(i)-step/2:.1f}" y="{t}" width="{step:.1f}" height="{h-t-b}" '
+        o.append(f'<rect class="hit" tabindex="0" aria-label="{e(tip)}" x="{x(i)-step/2:.1f}" y="{t}" width="{step:.1f}" height="{h-t-b}" '
                  f'data-tip="{e(tip)}" data-gx="{x(i):.1f}" data-i="{i}"/>')
     o.append("</svg>")
     filas = [(f"20{lab}", fmt(v, 2)) for lab, v in pts]
     return figura("La producción mundial creció 57% en diez años",
-                  "Frutos secos de árbol, millones de toneladas (sin maní). *2025/26 estimado.",
+                  "Frutos secos de árbol, millones de toneladas (sin maní). Peso sin cáscara, excepto pistacho con cáscara. *2025/26 estimado.",
                   "".join(o), fuente("inc_ar"),
                   tabla(["Temporada", "Millones de t"], filas))
 
@@ -157,13 +157,13 @@ def chart_pistacho():
             tip = f"{lab}: {fmt(v)} millones de libras"
         o.append(f'<text x="{x+bw/2:.1f}" y="{y(top)-8:.1f}" class="val" text-anchor="middle">{texto}</text>')
         o.append(f'<text x="{x+bw/2:.1f}" y="{h-12}" class="lab" text-anchor="middle">{e(lab)}</text>')
-        o.append(f'<rect class="hit" x="{l+slot*i:.1f}" y="{t}" width="{slot:.1f}" height="{base-t:.1f}" data-tip="{e(tip)}"/>')
+        o.append(f'<rect class="hit" tabindex="0" aria-label="{e(tip)}" x="{l+slot*i:.1f}" y="{t}" width="{slot:.1f}" height="{base-t:.1f}" data-tip="{e(tip)}"/>')
     o.append("</svg>")
-    filas = [(lab, fmt(v) if not vm else f"{fmt(v)}–{fmt(vm)} (proyección)") for lab, v, vm in D.PISTACHO]
-    return figura("Pistacho: de récord a la mitad, y de vuelta en 2027",
-                  "Cosecha de EE.UU., millones de libras. La barra rayada es la proyección para 2027.",
+    filas = [(lab, fmt(v) if not vm else f"{fmt(v)}–{fmt(vm)}") for lab, v, vm in D.PISTACHO]
+    return figura("Pistacho de EE.UU.: cosecha corta estimada en 2026 y recuperación potencial en 2027",
+                  "Millones de libras. 2026 es una estimación del sector; la barra rayada es un escenario condicionado al clima.",
                   "".join(o), fuente("pist_crop"), tabla(["Año", "Millones de lb"], filas),
-                  nota="El precio llegó a US$4,57 por libra en marzo de 2026, máximo de 8 años (" + fuente("nutlink") + ").")
+                  nota="Nutlink reportó cerca de US$4,57 por libra en marzo de 2026, máximo de ocho años; no es una cotización de compra para Colombia (" + fuente("nutlink") + ").")
 
 
 def chart_cambio():
@@ -189,14 +189,14 @@ def chart_cambio():
             o.append(f'<text x="{x(v)+6:.1f}" y="{yy+rh/2+5:.1f}" class="val" text-anchor="start">{val}</text>')
         else:
             o.append(f'<text x="{x(0)+6:.1f}" y="{yy+rh/2+5:.1f}" class="val" text-anchor="start">{val}</text>')
-        o.append(f'<rect class="hit" x="{lab_w}" y="{yy-gap/2}" width="{w-lab_w}" height="{rh+gap}" data-tip="{e(nombre)}: {val} frente a 2025/26"/>')
+        o.append(f'<rect class="hit" tabindex="0" aria-label="{e(nombre)}: {val}" x="{lab_w}" y="{yy-gap/2}" width="{w-lab_w}" height="{rh+gap}" data-tip="{e(nombre)}: {val} frente a 2025/26"/>')
     o.append("</svg>")
     leyenda = '<p class="legend"><span class="sw mark-bg"></span>Sube <span class="sw neg-bg"></span>Baja</p>'
     filas = [(n, f"{'+' if v >= 0 else '−'}{fmt(abs(v), 2 if abs(v) < 1 else 0)}%") for n, v in rows]
     return figura("Qué se viene en oferta para 2026/27",
-                  "Cambio previsto de producción mundial frente a 2025/26. Total de frutos de árbol: estable en unos 6 Mt.",
+                  "Previsión temprana del INC (mayo de 2026) frente a 2025/26; puede cambiar con la cosecha. Total de frutos de árbol: estable en unos 6 Mt.",
                   leyenda + "".join(o), fuente("inc_macao"), tabla(["Fruto", "Cambio previsto"], filas),
-                  nota="Lectura: el pistacho seguirá caro en lo que queda de 2026 y comienzos de 2027; la avellana y la nuez de Brasil, con más oferta, podrían abaratarse.")
+                  nota="Lectura: una menor oferta puede presionar precios (pistacho) y una mayor oferta puede aliviarlos (avellana, nuez de Brasil), pero estos porcentajes no permiten anticipar el costo de compra en Colombia.")
 
 
 def chart_participacion():
@@ -213,10 +213,10 @@ def chart_participacion():
         o.append(f'<text x="{lab_w-10}" y="{yy+rh/2+5:.1f}" class="lab strong" text-anchor="end">{e(nombre)}</text>')
         o.append(f'<path d="{hbar_path(lab_w, yy, x(v), rh)}" class="mark"/>')
         o.append(f'<text x="{lab_w+x(v)+6:.1f}" y="{yy+rh/2+5:.1f}" class="val">{v}%</text>')
-        o.append(f'<rect class="hit" x="{lab_w}" y="{yy-gap/2}" width="{w-lab_w}" height="{rh+gap}" data-tip="{e(nombre)}: {v}% de la producción 2024/25"/>')
+        o.append(f'<rect class="hit" tabindex="0" aria-label="{e(nombre)}: {v}%" x="{lab_w}" y="{yy-gap/2}" width="{w-lab_w}" height="{rh+gap}" data-tip="{e(nombre)}: {v}% de la producción 2024/25"/>')
     o.append("</svg>")
     return figura("Almendra, pistacho, marañón y nuez dominan",
-                  "Participación en la producción mundial de frutos de árbol, temporada 2024/25.",
+                  "Participación en la producción mundial de frutos de árbol, temporada 2024/25. Convención del INC: peso sin cáscara, excepto pistacho con cáscara. No representa ventas.",
                   "".join(o), fuente("inc_ar"), tabla(["Fruto", "%"], rows),
                   nota="“Otros” incluye pecana (2%), macadamia (1%), piñón (1%) y nuez de Brasil (menos de 1%). El maní, que es una leguminosa, se mide aparte: unos 51,8 millones de t con cáscara en 2024/25.")
 
@@ -251,7 +251,7 @@ def filtro(seccion):
 <button type="button" class="chip" data-f="latam" aria-pressed="false">Latinoamérica</button>
 <button type="button" class="chip" data-f="eeuu global" aria-pressed="false">EE.UU. y global</button>
 <span class="count" aria-live="polite"></span>
-<button type="button" class="toggle-all">Abrir todas</button>
+<button type="button" class="toggle-all" data-open="1">Abrir todas</button><button type="button" class="toggle-all" data-open="0">Cerrar todas</button>
 </div>'''
 
 
