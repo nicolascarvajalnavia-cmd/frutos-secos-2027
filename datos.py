@@ -75,13 +75,29 @@ def d(texto, fuente, nivel):
     return {"t": texto, "s": fuente, "n": nivel}
 
 
+# Las ideas del resumen son síntesis propia: cada una lleva las fuentes que la sostienen
+# (clave de S y alcance del dato) y las tarjetas del informe donde se amplía.
 RESUMEN = [
     ("Cada bocado tiene que rendir más",
-     "El consumidor no quiere comer menos: quiere que lo que come valga la pena. Proteína y fibra de verdad, pocos ingredientes y porción clara. El fruto seco ya trae todo eso; falta contarlo bien."),
+     "Gana importancia el aporte nutricional de cada porción: proteína y fibra, pocos ingredientes y porción controlada. Los frutos secos pueden responder a esta búsqueda; hay que verificar y comunicar su aporte por porción.",
+     [("innova27", "densidad nutricional, tendencia global"),
+      ("ific_prot", "proteína, EE.UU."),
+      ("ific_upf", "pocos ingredientes y menos procesamiento, EE.UU."),
+      ("mdlz25", "69% busca porción controlada, encuesta internacional de 2024")],
+     ["c-proteina", "s-densidad", "c-upf", "s-porcion"]),
     ("El placer no se negocia",
-     "Sabor y textura siguen mandando. Dulce-picante, sabores locales, crocante con cremoso. El bienestar que no sabe rico no se recompra."),
+     "Sabor y textura siguen pesando en la compra. Crecen los lanzamientos dulce-picante y hay interés por combinar texturas; de ahí proponemos sabores locales y mezclas de crocante con cremoso. La propuesta es combinar beneficio nutricional y disfrute, y validar su aceptación.",
+     [("innova27", "lanzamientos dulce-picante e interés declarado por combinaciones de texturas, alcance global; lanzamientos no equivalen a ventas"),
+      ("innovaC27", "importancia de los pequeños gustos"),
+      ("mdlz26", "mezcla de texturas, consumidores de Alemania"),
+      ("ific_upf", "el sabor como factor de compra, EE.UU.")],
+     ["s-sabores", "s-textura", "c-gustos"]),
     ("En Colombia mandan el precio y la etiqueta",
-     "Entre enero y noviembre de 2025, los frutos secos subieron en el IPC más del doble que los alimentos en general, y el descuento duro crece. Además, un proyecto de MinSalud podría crear un sello de “ultraprocesado” y otro verde de “alimento saludable”."),
+     "Entre enero y noviembre de 2025, los frutos secos subieron en el IPC más del doble que los alimentos en general, y en el descuento duro las marcas propias ya pesan mucho en las ventas. Además, un proyecto de MinSalud podría crear un sello de “ultraprocesado” y otro verde de “alimento saludable”.",
+     [("upra", "IPC de frutos secos y nueces, DANE"),
+      ("lr_mp", "marcas propias en D1 y Ara, declaraciones de las empresas"),
+      ("minsalud_pr", "proyecto de resolución, no aprobado")],
+     ["c-valor", "s-valor", "col-reg"]),
 ]
 
 ACCIONES = [

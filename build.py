@@ -256,8 +256,12 @@ def filtro(seccion):
 
 
 def build():
-    resumen = "".join(f'<div class="idea-card"><span class="num">{i+1}</span><h3>{e(t)}</h3><p>{e(p)}</p></div>'
-                      for i, (t, p) in enumerate(D.RESUMEN))
+    resumen = "".join(
+        f'<div class="idea-card"><span class="num">{i+1}</span><h3>{e(t)}</h3><p>{e(p)}</p>'
+        f'<p class="src"><b>Síntesis propia basada en:</b> '
+        + "; ".join(f"{fuente(k)} ({e(alc)})" for k, alc in fs) + ".</p>"
+        + rel_links(rel) + "</div>"
+        for i, (t, p, fs, rel) in enumerate(D.RESUMEN))
     acciones = "".join(f"<li>{e(a)}</li>" for a in D.ACCIONES)
     consumidor = "".join(tarjeta(c) for c in D.CONSUMIDOR)
     snacks = "".join(tarjeta(c) for c in D.SNACKS)
